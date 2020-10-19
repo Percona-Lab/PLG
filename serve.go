@@ -38,7 +38,7 @@ func getPositions(file *os.File) ([]int64, error) {
 	return positions, nil
 }
 
-//Server is a facade for starting HTTP server and reading previously recording files
+//Serve is a facade for starting HTTP server and reading previously recording files
 func Serve(c *Config) error {
 
 	it := make(map[string]int, len(c.Exporters))
