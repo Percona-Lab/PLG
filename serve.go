@@ -64,18 +64,16 @@ func Serve(c *Config) error {
 
 	metrics := func(w http.ResponseWriter, r *http.Request) {
 		lock.Lock()
-
+		defer lock.Unlock()
 		name := ""
 
 		for _, exporter := range c.Exporters {
-
 			if r.URL.String()[1:] == strings.SplitN(exporter.URL, "/", 4)[3] {
 				name = exporter.Name
 			}
 		}
 
 		if name == "" {
-			lock.Unlock()
 			w.WriteHeader(404)
 			fmt.Fprintf(w, "Unable to find metric: %s", r.URL)
 			return
@@ -88,14 +86,12 @@ func Serve(c *Config) error {
 
 		response, err := readRecorderE(name, it[name], positions[name])
 		if err != nil {
-			lock.Unlock()
 			w.WriteHeader(500)
 			fmt.Fprintf(w, "Error: %s", err)
 			return
 		}
 
 		fmt.Fprintf(w, "%s", response)
-		lock.Unlock()
 	}
 
 	http.HandleFunc("/metrics", metrics)

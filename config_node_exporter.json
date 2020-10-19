@@ -22,6 +22,6 @@
             "name": "node_mr_10s"
         }
     ],
-    "time": 20,
+    "time": 900,
     "bind": "localhost:8083"
 }
