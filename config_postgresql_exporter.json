@@ -1,0 +1,27 @@
+{
+    "exporters": [
+        {
+            "url": "http://192.168.1.172:42001/metrics?collect%5B%5D=custom_query.hr&collect%5B%5D=exporter&collect%5B%5D=standard.go&collect%5B%5D=standard.process",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 5,
+            "name": "postgresql_hr_5s"
+        },
+        {
+            "url": "http://192.168.1.172:42001/metrics?collect%5B%5D=custom_query.lr",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 60,
+            "name": "postgresql_lr_1m0s"
+        },
+        {
+            "url": "http://192.168.1.172:42001/metrics?collect%5B%5D=custom_query.mr",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 10,
+            "name": "postgresql_mr_10s"
+        }
+    ],
+    "time": 20,
+    "bind": "localhost:8082"
+}

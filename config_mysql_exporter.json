@@ -1,0 +1,27 @@
+{
+    "exporters": [
+        {
+            "url": "http://192.168.1.172:42000/metrics?collect%5B%5D=custom_query.hr&collect%5B%5D=global_status&collect%5B%5D=info_schema.innodb_metrics&collect%5B%5D=standard.go&collect%5B%5D=standard.process",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 5,
+            "name": "mysql_hr_5s"
+        },
+        {
+            "url": "http://192.168.1.172:42000/metrics?collect%5B%5D=auto_increment.columns&collect%5B%5D=binlog_size&collect%5B%5D=custom_query.lr&collect%5B%5D=engine_tokudb_status&collect%5B%5D=global_variables&collect%5B%5D=heartbeat&collect%5B%5D=info_schema.clientstats&collect%5B%5D=info_schema.innodb_tablespaces&collect%5B%5D=info_schema.tables&collect%5B%5D=info_schema.tablestats&collect%5B%5D=info_schema.userstats&collect%5B%5D=perf_schema.eventsstatements&collect%5B%5D=perf_schema.file_instances&collect%5B%5D=perf_schema.indexiowaits&collect%5B%5D=perf_schema.tableiowaits",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 60,
+            "name": "mysql_lr_1m0s"
+        },
+        {
+            "url": "http://192.168.1.172:42000/metrics?collect%5B%5D=custom_query.mr&collect%5B%5D=engine_innodb_status&collect%5B%5D=info_schema.innodb_cmp&collect%5B%5D=info_schema.innodb_cmpmem&collect%5B%5D=info_schema.processlist&collect%5B%5D=info_schema.query_response_time&collect%5B%5D=perf_schema.eventswaits&collect%5B%5D=perf_schema.file_events&collect%5B%5D=perf_schema.tablelocks&collect%5B%5D=slave_status",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 10,
+            "name": "mysql_mr_10s"
+        }
+    ],
+    "time": 20,
+    "bind": "localhost:8082"
+}

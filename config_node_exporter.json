@@ -1,0 +1,27 @@
+{
+    "exporters": [
+        {
+            "url": "http://192.168.1.172:42002/metrics?collect%5B%5D=buddyinfo&collect%5B%5D=cpu&collect%5B%5D=diskstats&collect%5B%5D=filefd&collect%5B%5D=filesystem&collect%5B%5D=loadavg&collect%5B%5D=meminfo&collect%5B%5D=meminfo_numa&collect%5B%5D=netdev&collect%5B%5D=netstat&collect%5B%5D=processes&collect%5B%5D=standard.go&collect%5B%5D=standard.process&collect%5B%5D=stat&collect%5B%5D=textfile.hr&collect%5B%5D=time&collect%5B%5D=vmstat",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 5,
+            "name": "node_hr_5s"
+        },
+        {
+            "url": "http://192.168.1.172:42002/metrics?collect%5B%5D=bonding&collect%5B%5D=entropy&collect%5B%5D=textfile.lr&collect%5B%5D=uname",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 60,
+            "name": "node_lr_1m0s"
+        },
+        {
+            "url": "http://192.168.1.172:42002/metrics?collect%5B%5D=hwmon&collect%5B%5D=textfile.mr",
+            "username": "pmm", 
+            "password": "/agent_id/964cac3c-d3f7-4d93-839f-3cb4a2a22f7d",
+            "duration": 10,
+            "name": "node_mr_10s"
+        }
+    ],
+    "time": 20,
+    "bind": "localhost:8083"
+}
